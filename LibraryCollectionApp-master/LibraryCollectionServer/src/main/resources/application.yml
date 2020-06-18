@@ -1,0 +1,65 @@
+server:
+  port: 9999
+  address: localhost
+  
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+  
+    hikari:
+      allow-pool-suspension: false
+      auto-commit: true
+      connection-timeout: 20000
+      idle-timeout: 1200000
+      initialization-fail-timeout: 1
+      isolate-internal-queries: false
+      leak-detection-threshold: 0
+      max-lifetime: 3600000
+      maximum-pool-size : 20
+      minimum-idle: 20
+      read-only: false
+      validation-timeout: 10000
+      pool-name: hikari-pool
+      register-mbeans: true
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+       hibernate:
+         
+         show_sql: true
+         format_sql: true
+         generate_statistics: true
+         SQL: WARN
+         stat: WARN
+ 
+         
+    
+      
+  
+    
+      
+    
+          
+          
+          
+          
+          
+          
+          
+           
+       
+      
+  
+  
